@@ -10,8 +10,8 @@ public class ConnexionConfiguration {
     private String password;
     public ConnexionConfiguration() {
         this.url = "jdbc:postgresql://localhost/library_management_api";
-        this.username = "postgres";
-        this.password = "ravo1401";
+        this.username = System.getenv("DB_USERNAME");
+        this.password = System.getenv("DB_PASSWORD");
     }
 
     public Connection createConnection() {
