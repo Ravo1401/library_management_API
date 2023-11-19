@@ -11,7 +11,7 @@ public class ConnexionConfiguration {
 
 
     public void ConnexionConfiguration() {
-        this.url = "jdbc:postgresql://localhost/library_management";
+        this.url = "jdbc:postgresql://localhost/library_management_API";
         this.username = "postgres";
         this.password = "12345678";
     }

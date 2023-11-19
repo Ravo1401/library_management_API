@@ -1,4 +1,4 @@
-package hei.school;
+package entity;
 
 public enum topic_enum {
     ROMANCE, COMEDY, OTHER;

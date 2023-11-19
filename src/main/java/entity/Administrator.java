@@ -1,4 +1,4 @@
-package hei.school;
+package entity;
 
 public class Administrator extends User{
     private String password ;

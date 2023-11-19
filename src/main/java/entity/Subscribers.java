@@ -1,4 +1,4 @@
-package hei.school;
+package entity;
 
 public class Subscribers {
     private String id ;

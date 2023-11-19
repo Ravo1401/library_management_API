@@ -1,9 +1,9 @@
 package Repository;
 
-import hei.school.Book;
+import entity.Book;
 import hei.school.ConnexionConfiguration;
-import hei.school.CrudOperations;
-import hei.school.topic_enum;
+import Repository.CrudOperations;
+import entity.topic_enum;
 
 import java.sql.*;
 import java.util.ArrayList;

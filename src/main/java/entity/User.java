@@ -1,4 +1,4 @@
-package hei.school;
+package entity;
 
 public class User {
     private int id ;

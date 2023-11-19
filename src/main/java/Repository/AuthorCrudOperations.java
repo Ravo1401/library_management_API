@@ -1,8 +1,8 @@
 package Repository;
 
-import hei.school.Author;
+import entity.Author;
 import hei.school.ConnexionConfiguration;
-import hei.school.CrudOperations;
+import Repository.CrudOperations;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;

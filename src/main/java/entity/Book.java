@@ -1,4 +1,4 @@
-package hei.school;
+package entity;
 
 import java.sql.Date;
 

@@ -1,4 +1,4 @@
-package hei.school;
+package Repository;
 
 import java.util.List;
 
