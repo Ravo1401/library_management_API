@@ -2,7 +2,6 @@ package Repository;
 
 import entity.Book;
 import hei.school.ConnexionConfiguration;
-import Repository.CrudOperations;
 import entity.topic_enum;
 
 import java.sql.*;
@@ -14,7 +13,7 @@ public class BookCrudOperations implements CrudOperations<Book> {
     private static Connection connection;
 
     public static void getConnection(){
-        ConnexionConfiguration connex = new ConnexionConfiguration() ;
+        ConnexionConfiguration connex = new ConnexionConfiguration();
         connection = connex.createConnection() ;
     }
     private Book extractBookFromResultSet(ResultSet resultSet) throws SQLException {

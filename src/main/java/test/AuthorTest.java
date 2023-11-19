@@ -11,7 +11,7 @@ public class AuthorTest {
         AuthorCrudOperations authorCrudOperations = new AuthorCrudOperations() ;
         authorCrudOperations.findAll() ;
 
-        Author author = new Author(5,"Ravo" , "M") ;
+        Author author = new Author(8,"Ravo" , "M") ;
         authorCrudOperations.save(author) ;
 
         List<Author> authorsToSave = new ArrayList<>();

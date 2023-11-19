@@ -2,7 +2,6 @@ package Repository;
 
 import entity.Author;
 import hei.school.ConnexionConfiguration;
-import Repository.CrudOperations;
 
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -20,8 +19,8 @@ public class AuthorCrudOperations implements CrudOperations<Author> {
         connection = connex.createConnection() ;
     }
     private Author extractAuthorFromResultSet(ResultSet resultSet) throws SQLException {
-        int id = resultSet.getInt("id");
-        String authorName =  resultSet.getString("authorName");
+        int id = resultSet.getInt("authorid");
+        String authorName =  resultSet.getString("authorname");
         String sex =  resultSet.getString("sex");
 
         return new Author(id ,authorName , sex) ;
@@ -40,7 +39,7 @@ public class AuthorCrudOperations implements CrudOperations<Author> {
                 System.out.println(author);
             }
         } catch (SQLException e) {
-            throw new RuntimeException("There was a error while fetching books") ;
+            throw new RuntimeException(e) ;
         }
 
         return authors;
@@ -51,7 +50,7 @@ public class AuthorCrudOperations implements CrudOperations<Author> {
         List<Author> savedAuthors = new ArrayList<>();
 
         try {
-            String query = "INSERT INTO author (id, authorName, sex) VALUES (? ,? ,?)";
+            String query = "INSERT INTO author (authorid, authorName, sex) VALUES (? ,? ,?)";
             getConnection() ;
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
@@ -77,7 +76,7 @@ public class AuthorCrudOperations implements CrudOperations<Author> {
     @Override
     public Author save(Author toSave) {
         try {
-            String query = "INSERT INTO author (id, authorName, sex) VALUES (? ,? ,?)";
+            String query = "INSERT INTO author (authorid, authorName, sex) VALUES (? ,? ,?)";
             getConnection();
             try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
 
@@ -95,7 +94,7 @@ public class AuthorCrudOperations implements CrudOperations<Author> {
 
     @Override
     public Author delete(Author toDelete) {
-        String sql = "DELETE FROM author WHERE id = ?" ;
+        String sql = "DELETE FROM author WHERE authorid = ?" ;
         getConnection() ;
         try(PreparedStatement preparedStatement =connection.prepareStatement(sql)){
             preparedStatement.setInt(1 , toDelete.getId());

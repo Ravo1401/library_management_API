@@ -1,12 +1,12 @@
 package entity;
 
 public class Author {
-    private  int id ;
+    private  int authorid ;
     private String AuthorName ;
     private String sex ;
 
     public Author(int id, String authorName, String sex) {
-        this.id = id;
+        this.authorid = id;
         AuthorName = authorName;
         this.sex = sex;
     }
@@ -14,18 +14,18 @@ public class Author {
     @Override
     public String toString() {
         return "Author{" +
-                "id=" + id +
+                "id=" + authorid +
                 ", AuthorName='" + AuthorName + '\'' +
                 ", sex=" + sex +
                 '}';
     }
 
     public int getId() {
-        return id;
+        return authorid;
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.authorid = id;
     }
 
     public String getAuthorName() {

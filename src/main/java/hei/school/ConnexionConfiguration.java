@@ -8,16 +8,14 @@ public class ConnexionConfiguration {
     private String url;
     private String username;
     private String password;
-
-
-    public void ConnexionConfiguration() {
-        this.url = "jdbc:postgresql://localhost/library_management_API";
+    public ConnexionConfiguration() {
+        this.url = "jdbc:postgresql://localhost/library_management_api";
         this.username = "postgres";
-        this.password = "12345678";
+        this.password = "ravo1401";
     }
 
-    public Connection createConnection(){
-        try{
+    public Connection createConnection() {
+        try {
             Class.forName("org.postgresql.Driver");
             Connection connection = DriverManager.getConnection(
                     this.url, this.username, this.password
