@@ -1,13 +1,46 @@
 package hei.school;
 
 public class Author {
-    private int authorId;
-    private String name;
-    private char sex;
+    private  int id ;
+    private String AuthorName ;
+    private String sex ;
 
-    public Author(int idauthor, String name, char sex) {
-        this.authorId = idauthor;
-        this.name = name;
+    public Author(int id, String authorName, String sex) {
+        this.id = id;
+        AuthorName = authorName;
+        this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "Author{" +
+                "id=" + id +
+                ", AuthorName='" + AuthorName + '\'' +
+                ", sex=" + sex +
+                '}';
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getAuthorName() {
+        return AuthorName;
+    }
+
+    public void setAuthorName(String authorName) {
+        AuthorName = authorName;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
         this.sex = sex;
     }
 }
