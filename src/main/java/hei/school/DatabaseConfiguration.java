@@ -14,7 +14,6 @@ public class DatabaseConfiguration {
                     System.getenv("DB_USER"),
                     System.getenv("DB_PASSWORD")
             );
-            System.out.println("Successful connection");
         } catch (SQLException e) {
             System.out.println("Error while connecting to the database : " + e.getMessage());
         }
